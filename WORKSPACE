@@ -85,6 +85,10 @@ pip_import(
     name = "grpc_python_dependencies",
     requirements = "@com_github_grpc_grpc//:requirements.bazel.txt",
 )
+pip_import(
+   name = "py_deps",
+   requirements = "//third_party/py:requirements.txt",
+)
 load("@grpc_python_dependencies//:requirements.bzl", "pip_install")
 pip_repositories()
 pip_install()
