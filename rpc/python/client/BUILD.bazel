@@ -1,0 +1,16 @@
+package(default_visibility = ["//visibility:public"])
+
+load("@py_deps//:requirements.bzl", "requirement")
+
+py_binary(
+    name = "client",
+    srcs = [
+        "client.py",
+    ],
+    deps = [
+#        requirement("grpcio"),
+#        requirement('absl-py'),
+        "//rpc/proto:data_py_proto",
+        "//rpc/proto:rcd_py_grpc",
+    ]
+)

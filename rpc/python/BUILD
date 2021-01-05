@@ -9,7 +9,7 @@ py_binary(
     deps = [
         "//codelab/grpc/proto:echo_service_py_grpc_proto",
         requirement("grpcio"),
-        requirement('absl-py'),
+#        requirement('absl-py'),
     ],
 )
 
@@ -21,6 +21,6 @@ py_binary(
     deps = [
         "//codelab/grpc/proto:echo_service_py_grpc_proto",
         requirement("grpcio"),
-        requirement('absl-py'),
+#        requirement('absl-py'),
     ],
 )

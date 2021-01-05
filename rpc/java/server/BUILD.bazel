@@ -7,12 +7,11 @@ java_binary(
         "RcdServerImpl.java",
     ],
     data = [
-        ":data/user.json"
+        "//rpc/java/data:user_data"
     ],
     resource_strip_prefix = "rpc/java/resources",
     resources = [
         "//rpc/java/resources:log4j_properties",
-        "//rpc/java/data:user_data"
     ],
     main_class = "rpc.java.server.RcdServer",
     deps = [
