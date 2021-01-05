@@ -1,0 +1,14 @@
+syntax = "proto3";
+package rcd;
+option java_package = "com.codelab.rpc.rcd";
+option go_package = "codelab.com/rpc/rcd";
+
+enum Method {
+    GET = 0;
+    DELETE = 1;
+}
+
+message Result {
+    int32 code = 1;
+    string message = 2;
+}

@@ -1,0 +1,38 @@
+{
+  "id": 1,
+  "name": "wong",
+  "action": [
+    {
+      "item": {
+        "id": 1,
+        "title": "java",
+        "weight": 0.3
+      },
+      "score": 0.5
+    },
+    {
+      "item": {
+        "id": 2,
+        "title": "golang",
+        "weight": 0.4
+      },
+      "score": 0.6
+    },
+    {
+      "item": {
+        "id": 3,
+        "title": "bazel",
+        "weight": 0.3
+      },
+      "score": 0.7
+    },
+    {
+      "item": {
+        "id": 4,
+        "title": "python",
+        "weight": 0.6
+      },
+      "score": 0.9
+    }
+  ]
+}

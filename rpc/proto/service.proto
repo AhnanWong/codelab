@@ -1,0 +1,29 @@
+syntax = "proto3";
+package rcd;
+option java_package = "com.codelab.rpc.rcd";
+option go_package = "codelab.com/rpc/rcd";
+
+import "rpc/proto/common.proto";
+import "rpc/proto/user.proto";
+import "rpc/proto/item.proto";
+
+message Context {
+    User user = 1;
+    repeated Item item_list = 2;
+}
+
+message Request {
+    Method method = 1;
+    User user = 2;
+    int32 count = 3;
+}
+
+message Response {
+    Result result = 1;
+    Context context = 2;
+    string time = 3;
+}
+
+service RcdService {
+    rpc rec(Request) returns (Response);
+}

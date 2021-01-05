@@ -1,0 +1,22 @@
+load("@io_bazel_rules_go//go:def.bzl", "go_library")
+
+go_library(
+    name = "base",
+    srcs = [
+        "base.go"
+    ],
+    importpath = "codelab.com/rpc/base",
+    deps = [
+        "//rpc/proto:rcd_go_grpc",
+        "@org_uber_go_zap//:go_default_library",
+        "@com_github_golang_protobuf//jsonpb:go_default_library_gen",
+        "@com_github_golang_protobuf//proto:go_default_library",
+    ],
+    visibility = ["//visibility:public"],
+)
+
+alias(
+    name = "go_default_library",
+    actual = ":base",
+    visibility = ["//visibility:public"],
+)

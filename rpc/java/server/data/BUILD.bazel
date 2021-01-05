@@ -1,0 +1,8 @@
+package(default_visibility = ["//visibility:public"])
+
+filegroup(
+    name = "user_data",
+    srcs = [
+        "user.json"
+    ],
+)

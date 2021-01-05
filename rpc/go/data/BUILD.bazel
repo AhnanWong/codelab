@@ -1,0 +1,12 @@
+load("@io_bazel_rules_go//go:def.bzl", "go_embed_data")
+
+exports_files(
+    ["user.json"]
+)
+
+go_embed_data(
+    name = "resources",
+    srcs = glob(["**/*.json"]),
+    package = "main",
+    visibility = ["//visibility:public"],
+)

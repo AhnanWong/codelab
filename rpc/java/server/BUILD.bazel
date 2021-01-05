@@ -1,0 +1,32 @@
+package(default_visibility = ["//visibility:public"])
+
+java_binary(
+    name = "server",
+    srcs = [
+        "RcdServer.java",
+        "RcdServerImpl.java",
+    ],
+    data = [
+        ":data/user.json"
+    ],
+    resource_strip_prefix = "rpc/java/resources",
+    resources = [
+        "//rpc/java/resources:log4j_properties",
+        "//rpc/java/data:user_data"
+    ],
+    main_class = "rpc.java.server.RcdServer",
+    deps = [
+        "//base/java/com/codelab/base:file_utils_lib",
+        "//base/java/com/codelab/base:proto_utils_lib",
+        "//rpc/proto:data_java_proto",
+        "//rpc/proto:rcd_java_grpc",
+        "@io_grpc_grpc_java//netty",
+        "@io_grpc_grpc_java//api",
+        "@io_grpc_grpc_java//stub",
+        "@io_grpc_grpc_java//core:core_maven",
+        "@maven//:org_apache_logging_log4j_log4j_api",
+        "@maven//:org_apache_logging_log4j_log4j_core",
+        "@com_google_protobuf//:protobuf_java",
+        "@com_google_protobuf//:protobuf_java_util",
+    ],
+)

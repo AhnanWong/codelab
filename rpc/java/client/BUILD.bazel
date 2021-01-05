@@ -1,0 +1,21 @@
+package(default_visibility = ["//visibility:public"])
+
+load("@io_bazel_rules_docker//container:container.bzl", "container_image")
+load("@io_bazel_rules_docker//container:container.bzl", "container_push")
+
+java_binary(
+    name = "client",
+    srcs = [
+        "RcdClient.java",
+    ],
+    main_class = "rpc.java.client.RcdClient",
+    deps = [
+        "//rpc/proto:data_java_proto",
+        "//rpc/proto:rcd_java_grpc",
+        "@io_grpc_grpc_java//netty",
+        "@io_grpc_grpc_java//api",
+        "@io_grpc_grpc_java//stub",
+        "@io_grpc_grpc_java//core:core_maven",
+        "@maven//:com_google_protobuf_protobuf_java_util"
+    ],
+)
