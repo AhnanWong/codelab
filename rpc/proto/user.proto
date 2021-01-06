@@ -1,0 +1,18 @@
+syntax = "proto3";
+package rcd;
+option java_package = "com.codelab.rpc.rcd";
+option go_package = "codelab.com/rpc/rcd";
+
+import "rpc/proto/item.proto";
+
+message User {
+    int32 id = 1;
+    string name = 2;
+    int32 sex = 3;
+    repeated Action action = 4;
+}
+
+message Action {
+    Item item = 1;
+    float score = 2;
+}

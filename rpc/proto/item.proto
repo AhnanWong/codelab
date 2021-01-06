@@ -1,0 +1,10 @@
+syntax = "proto3";
+package rcd;
+option java_package = "com.codelab.rpc.rcd";
+option go_package = "codelab.com/rpc/rcd";
+
+message Item {
+    int32 id = 1;
+    string title = 2;
+    float weight = 3;
+}

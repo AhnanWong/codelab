@@ -1,0 +1,41 @@
+[
+  {
+    "id": 1,
+    "name": "",
+    "sex": 0,
+    "action": [
+      {
+        "id": 1,
+        "title": "hello",
+        "weight": 0.2
+      },
+      {
+        "id": 2,
+        "title": "world",
+        "weight": 0.5
+      },
+      {
+        "id": 3,
+        "title": "golang",
+        "weight": 0.6
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "name": "",
+    "sex": 1,
+    "action": [
+      {
+        "id": 1,
+        "title": "hello",
+        "weight": 0.4
+      },
+      {
+        "id": 4,
+        "title": "next",
+        "weight": 0.3
+      }
+    ]
+  }
+]

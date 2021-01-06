@@ -1,0 +1,14 @@
+package(default_visibility = ["//visibility:public"])
+
+java_library(
+    name = "proto_utils_lib",
+    srcs = glob([
+        "*.java",
+    ]),
+    deps = [
+        "//base/java/com/codelab/base/file:file_utils_lib",
+        "@com_google_protobuf//:protobuf_java",
+        "@com_google_protobuf//:protobuf_java_util",
+#        "@maven//:com_google_protobuf_protobuf_java_util"
+    ],
+)

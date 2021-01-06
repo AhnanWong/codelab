@@ -1,0 +1,5 @@
+source ~/.bashrc
+cd /data/service/
+java -jar sever_deploy.jar
+
+docker run -p 1539:1539 -v /Users/wangyanan/IdeaProjects/backend:/data/code/backend -tdi 16047163b9ea

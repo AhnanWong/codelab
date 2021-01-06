@@ -1,0 +1,3 @@
+source ~/.bashrc
+cd /data/service/
+java -jar server_deploy.jar
