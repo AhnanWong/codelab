@@ -50,7 +50,7 @@ public class RcdServer
     public static void main(String[] args) throws IOException {
         log.info("server start...");
 
-        RcdServer server = new RcdServer(5100);
+        RcdServer server = new RcdServer(5300);
         server.start();
         log.info("job done!!!");
     }
